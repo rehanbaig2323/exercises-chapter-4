@@ -4,6 +4,8 @@ from scipy.signal import convolve2d
 
 glider = np.array([[0, 1, 0], [0, 0, 1], [1, 1, 1]])
 
+# and we go again
+
 blinker = np.array([
  [0, 0, 0],
  [1, 1, 1],
