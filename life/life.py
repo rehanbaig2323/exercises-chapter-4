@@ -10,7 +10,7 @@ blinker = np.array([
  [0, 0, 0],
  [1, 1, 1],
  [0, 0, 0]]
-    )
+)
 
 glider_gun = np.array([
     [0, 0, 0, 0, 1, 1, 0, 0, 0],
@@ -79,7 +79,7 @@ class Game:
                                          or (neighbourcount[i, j] == 2
                                          and self.board[i, j])) else 0
 
-    def __setitem__(self, key, value): 
+    def __setitem__(self, key, value):
         """Set items."""
         self.board[key] = value
 
