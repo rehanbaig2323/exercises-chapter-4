@@ -55,9 +55,9 @@ glider_gun = np.array([
 class Game:
     """Cellular Automata Game."""
 
-    def __init__(self, game, size):
+    def __init__(self, size):
         """Construct method."""
-        game.board = np.zeros((size, size))
+        self.board = np.zeros((size, size))
 
     def play(self):
         """Playing the game."""
