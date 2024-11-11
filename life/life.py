@@ -89,6 +89,19 @@ class Game:
         pyplot.matshow(self.board, fignum=0, cmap='binary')
         pyplot.show()
 
+    def insert(self, pattern, location):
+        """Insert pattern onto game board."""
+        self.board[location[0], location[1]] = pattern.grid[1, 1]
+        self.board[location[0], location[1]] = pattern.grid[1, 1]
+        self.board[location[0] - 1, location[1] - 1] = pattern.grid[0, 0]
+        self.board[location[0] - 1, location[1]] = pattern.grid[0, 1]
+        self.board[location[0] - 1, location[1] + 1] = pattern.grid[0, 2]
+        self.board[location[0], location[1] - 1] = pattern.grid[1, 0]
+        self.board[location[0], location[1] + 1] = pattern.grid[1, 2]
+        self.board[location[0] + 1, location[1] - 1] = pattern.grid[2, 0]
+        self.board[location[0] + 1, location[1]] = pattern.grid[2, 1]
+        self.board[location[0] + 1, location[1] + 1] = pattern.grid[2, 2]
+
 
 class Pattern:
     """Pattern class."""
@@ -96,6 +109,10 @@ class Pattern:
     def __init__(self, array):
         """Construct method."""
         self.grid = array
+
+    def __repr__(self):
+        """Return a string representation of the pattern's grid."""
+        return f"{self.grid}"
 
     def flip_vertical(self):
         """Return flipped pattern in vertical axis."""
@@ -117,10 +134,6 @@ class Pattern:
             lizst.append(temp)
         return Pattern(lizst[-1])
 
-    def __repr__(self):
-        """Return a string representation of the pattern's grid."""
-        return f"{self.grid}"
-
 
 A = Pattern(np.diag([1.0, 2, 3]))
-print(A.rotate(3))
+print(np.zeros((9, 9)))
