@@ -96,3 +96,7 @@ class Pattern:
     def __init__(self, array):
         """Construct method."""
         self.grid = array
+
+    def flip_vertical(self):
+        """Return flipped pattern in vertical axis."""
+        return self.grid[::-1]
