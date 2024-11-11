@@ -99,15 +99,18 @@ class Pattern:
 
     def flip_vertical(self):
         """Return flipped pattern in vertical axis."""
-        return np.flipud(self.grid)
+        return Pattern(np.flipud(self.grid))
 
     def flip_horizontal(self):
         """Return flipped pattern in horizontal axis."""
-        return np.fliplr(self.grid)
+        return Pattern(np.fliplr(self.grid))
 
     def flip_diag(self):
         """Return the transpose of a pattern."""
-        return np.transpose(self.grid)
+        return Pattern(np.transpose(self.grid))
+
+    def rotate(self, n):
+        """Rotate a pattern through n right anticlockwise turns."""
 
 
 A = Pattern(np.diag([1.0, 2, 3]))
