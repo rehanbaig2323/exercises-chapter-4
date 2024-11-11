@@ -88,3 +88,11 @@ class Game:
         pyplot.clf()
         pyplot.matshow(self.board, fignum=0, cmap='binary')
         pyplot.show()
+
+
+class Pattern: 
+    """Pattern class."""
+
+    def __init__(self, array):
+        """Construct method."""
+        self.grid = array
