@@ -99,4 +99,8 @@ class Pattern:
 
     def flip_vertical(self):
         """Return flipped pattern in vertical axis."""
-        return self.grid[::-1]
+        return np.flipud(self.grid)
+
+    def flip_horizontal(self):
+        """Return flipped pattern in horizontal axis."""
+        return np.fliplr(self.grid)
