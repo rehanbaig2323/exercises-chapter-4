@@ -111,8 +111,15 @@ class Pattern:
 
     def rotate(self, n):
         """Rotate a pattern through n right anticlockwise turns."""
-        n = n % 4  # Ensure rotations are within 0-3
-        return Pattern(np.rot90(self.grid, k=n))
+        lizst = [self.grid]
+        for i in range(n):
+            temp = np.flipud(np.transpose(lizst[-1]))
+            lizst.append(temp)
+        return Pattern(lizst[-1])
+
+    def __repr__(self):
+        """Return a string representation of the pattern's grid."""
+        return f"{self.grid}"
 
 
 A = Pattern(np.diag([1.0, 2, 3]))
