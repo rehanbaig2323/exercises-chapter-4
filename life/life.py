@@ -104,3 +104,6 @@ class Pattern:
     def flip_horizontal(self):
         """Return flipped pattern in horizontal axis."""
         return np.fliplr(self.grid)
+
+
+# fo
