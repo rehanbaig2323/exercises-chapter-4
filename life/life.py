@@ -90,7 +90,7 @@ class Game:
         pyplot.show()
 
 
-class Pattern: 
+class Pattern:
     """Pattern class."""
 
     def __init__(self, array):
