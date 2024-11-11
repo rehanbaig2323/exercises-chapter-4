@@ -105,5 +105,10 @@ class Pattern:
         """Return flipped pattern in horizontal axis."""
         return np.fliplr(self.grid)
 
+    def flip_diag(self):
+        """Return the transpose of a pattern."""
+        return np.transpose(self.grid)
 
-# fo
+
+A = Pattern(np.diag([1.0, 2, 3]))
+print(A.flip_horizontal())
