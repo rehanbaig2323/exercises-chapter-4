@@ -111,6 +111,11 @@ class Pattern:
 
     def rotate(self, n):
         """Rotate a pattern through n right anticlockwise turns."""
+        temp = self.grid
+        for i in range(n):
+            temp.transpose()
+            temp.flipud()
+        return Pattern(temp)
 
 
 A = Pattern(np.diag([1.0, 2, 3]))
